@@ -1,14 +1,14 @@
 
-const gen_silence = (format, size) => {
+const gen_silence = (audioFormat, signed, size) => {
   var silence = null
 
-  if(format.audioFormat == 6) {
-    if(format.signed) {
+  if(audioFormat == 6) {
+    if(signed) {
       silence = Buffer.alloc(size, 0x55) // ALAW silence value signed
     } else {
       silence = Buffer.alloc(size, 0xD5) // ALAW silence value unsigned
     }
-  } else if(format.audioFormat == 7) {
+  } else if(audioFormat == 7) {
     silence = Buffer.alloc(size, 0xFF) // MULAW silence value
   } else {
     // assume L16
