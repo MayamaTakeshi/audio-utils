@@ -1,5 +1,5 @@
 {
-  "name": "audio-utils",
+  "name": "@mayama/audio-utils",
   "version": "1.0.0",
   "description": "Some audio utility functions for node.js",
   "main": "index.js",
